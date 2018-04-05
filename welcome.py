@@ -7,11 +7,11 @@ import infermedica_api
 infermedica_api.configure(app_id='8eab6cb8', app_key='ff87a9caf26433944a6236f19e70173f')
 
 conversation = ConversationV1(
-username= 'ee31881d-a19a-410a-8768-ce8e04fbc738',
-password= 'DFrrY7F6qH0W',
+username= '77580160-50e6-4687-968a-b4b78b8199f9',
+password= '30IMzwWyQjfq',
 version= '2017-05-26'
 )
-workspace_id = 'ccd11644-769b-4d49-9dcc-8447007b413b'
+workspace_id = '957755fd-3d4c-4b76-854e-92154d6887d0'
 
 language_translator = LanguageTranslatorV2(
   url= "https://gateway.watsonplatform.net/language-translator/api",
