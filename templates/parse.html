@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>NLP Parse</title>
+        <!-- Include Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">        
+        <link rel="stylesheet" href="./static/stylesheets/style.css">
+    </head>
+    <body>
+
+
+
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="#">NurseAI</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                        <a class="nav-link" href="/">Chatbot</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="/symptom">Translator</a>
+                        </li>
+                        <li class="nav-item active">
+                        <a class="nav-link" href="/parse">NLP Symptom Parsing <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="/diagnosis">Diagnosis </a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="/report">Doctor's report</a>
+                        </li>
+                    </ul>
+                    </div>
+                </nav>
+        </header>
+        
+        <div class="container mt-4">
+            
+            <h1>Infermedica NLP Parsing</h1>
+
+            <div class="row mt-5">
+                <div class="col-sm-5">
+
+                    <form enctype='application/json' id="form2" class="ajax_form" action="parse" method="POST">
+                        <div class="form-group mb-0">
+                        <h3>User input</h3>
+                            <p>The translated dialogue from the chatbot conversation would then be put through Infermedica's Natural Language Processing to parse symptoms:</p>
+                            <textarea name="parse" id="parse" class="form-control" rows="10"></textarea>
+                        </div>
+                        <input type="submit" value="Send" class="btn btn-block btn-primary">
+                    </form>
+                </div>
+
+                <div class="col-sm-5 output">
+                <h3>Parsed symptoms</h3>
+                    <textarea id="result_text" class="form-control outputbox" rows="15" cols="50">
+                    </textarea>
+                       
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    
+
+        <!-- Bootstrap and jQuery JavaScript Files -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+        <!-- Custom JS File -->
+        <script src="static/js/parse.js"></script>
+    </body>
+</html>
